@@ -1,62 +1,76 @@
 from PIL import Image
 
-# used claude for two comp conversion logic,
 
 # 1. Build an ASCII-to-decimal converter.
 
-# s = "Endalk"
-# for c in s:
-#    print(ord(c))
+s = "Endalk"
+for c in s:
+    print(ord(c))
 
 
 # 2. Build a number-base converter supporting binary, decimal, octal, and hexadecimal.
 
-def to_binary(n):
-    if n >= 0:
-        result = bin(n)
-        result = result[2:]
-    return result
+# def to_binary(n):
+#     if n >= 0:
+#         result = bin(n)
+#         result = result[2:]
+    # else:  # handle neg values but not needed
+    #     magnitude = -n
+    #     result = bin(magnitude)
+    #     result = result[2:]
+    #     result = "-" + result
+    # return result
 
 
-def to_octal(n):
-    if n >= 0:
-        result = oct(n)
-        result = result[2:]
-    return result
+# def to_octal(n):
+#     if n >= 0:
+#         result = oct(n)
+#         result = result[2:]
+#     # else: # handle neg values but not needed
+#     #     magnitude = -n
+#     #     result = oct(magnitude)
+#     #     result = result[2:]
+#     #     result = "-" + result
+#     return result
 
 
-def to_hex(n):
-    if n >= 0:
-        result = hex(n)
-        result = result[2:]
-    return result
+# def to_hex(n):
+#     if n >= 0:
+#         result = hex(n)
+#         result = result[2:]
+#     # else:  # handle neg values but not needed
+#     #     magnitude = -n
+#     #     result = hex(magnitude)
+#     #     result = result[2:]
+#     #     result = "-" + result
+#     return result
 
 
-def two_comp(bits, bit_width):
-    value = int(bits, 2)
-    if (value >= 2 ** (bit_width - 1)):
-        value -= 2 ** bit_width
-    return value
+# def two_comp(bits, bit_width):
+#     value = int(bits, 2)
+#     if (value >= 2 ** (bit_width - 1)):
+#         value -= 2 ** bit_width
+#     return value
 
 
-def int_to_binary(n, bit_width):
-    if n < 0:
-        n = (1 << bit_width) + n
-    return format(n, f'0{bit_width}b')
+# def int_to_binary(n, bit_width):
+#     if n < 0:
+#         n = (1 << bit_width) + n
+#     return format(n, f'0{bit_width}b')
 
 
-bit_width = 8
-test_vals = [0, 255, -1]
+# bit_width = 8
+# test_vals = [0, 255, -1]
 
-for num in test_vals:
-    if num >= 0:
-        print(f"{to_binary(num)}")
-        print(f"{to_hex(num)}")
-        print(f"{to_octal(num)}")
-    else:
-        tc = int_to_binary(num, bit_width)
-        print(f"{tc}")
-        print(f"{two_comp(tc, bit_width)}")
+# for num in test_vals:
+#     if num >= 0:
+#         print(f"{to_binary(num)}")
+#         print(f"{to_hex(num)}")
+#         print(f"{to_octal(num)}")
+#     else:
+#         tc = int_to_binary(num, bit_width)
+#         print(f"{tc}")
+#         print(f"{two_comp(tc, bit_width)}")
 
 
 # 3. Write a program that reads an image and prints its pixel values.
