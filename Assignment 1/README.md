@@ -1,14 +1,20 @@
 # Assignment 1 CS 240
 ## Task 1: ASCII-to-decimal converter
 Takes a string and prints the decimal vlaue for each character using ord()
+
+
 <img src="ASCII2Decimal-output.png" width="300">
 
 ## Task 2:
 Takes inputs 0, 255, and -1 to test for 0's largest unsigned number and a negative number. Conversions for to_bin(), to_oct(), to_hex() are done using built-in functions. 
+
+
 <img src="Number Base Converter.png" width="300">
 
 ## Task 3:
 Takes an image as its input, and goes pixel by pixel and converts each to R/B/Y to differenciate teh different colors in the image. Converts smiley2.png to awesome_picture.txt
+
+
 <img src="Task 3 Output.png" width="200">
 
 ## Task 4:
